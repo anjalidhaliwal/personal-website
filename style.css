@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+/* header styles */
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px 0px;
+  text-align: center;
+}
+
+.hi {
+  font-size: 24px;
+  font-weight: bold;
+    margin: 0;
+    padding: 10px 0px;
+}
+
+/* profile picture image */
+.profile-pic {
+  width: 100px;
+  height: 115px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  display: block;
+  transition: border-color 0.3s ease;
+  background-color: #f8f9fa;
+}
+.profile-pic:hover {
+  border-color: #007bff;
+  cursor: pointer;
+}
+.profile-pic:active {
+  border-color: #0056b3;
+}
+.profile-pic:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(112, 225, 144, 0.5);
+}
+.profile-pic:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.profile-pic:disabled:hover {
+  border-color: #ccc;
+}
+.profile-pic:disabled:active {
+  border-color: #ccc;
+}
+
+.intro{
+    font-size: 18px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* as seen in logos */
+.media
+img {
+  width: 150px;
+  height: 80px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display:inline-block
+    margin: 8px;
+    transition: border-color 0.3s ease;
+
+}
+.media:hover {
+  border-color: #00ffc3;
+  cursor: pointer;
+}
+
+.media li {
+  list-style: none;
+    display: inline-block;
+    width: 150px;
+    height: 80px;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+  margin: 20px;
+}
+
+#era {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 4px 1fr; /* left column, line, right column */
+  gap: 3rem 2rem;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: "";
+  grid-column: 2 / 3;
+  background: #e1e1e1;
+  width: 4px;
+  border-radius: 2px;
+}
+
+/* Each card */
+.event {
+  background: #fff;
+  padding: 1.25rem 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.08);
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  text-align: center;
+}
+
+/* Images */
+.event img {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+
+/* Place odds on left, evens on right */
+.event:nth-of-type(odd)  { grid-column: 1; }
+.event:nth-of-type(even) { grid-column: 3; }
+
+
+.event {
+  position: relative;
+}
+.event:nth-of-type(odd)::before  { right: -2px; }
+.event:nth-of-type(even)::before { left: calc(50% - 2px); }
+
+/* Mobile: stack into one column */
+@media (max-width: 700px) {
+  .timeline {
+    grid-template-columns: 4px 1fr;
+    gap: 2rem 1.5rem;
+  }
+  .timeline::before { grid-column: 1; }
+  .event { grid-column: 2; }
+  .event::before {
+    left: 0;
+    transform: translateX(-50%);
+  }
+}
+
+.project img {
+  max-width: 220px;      /* cap the width */
+  width: 100%;           /* still shrink on tiny screens */
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  margin-inline: auto;   /* centers inside the card */
+}
+.project {
+  background: #fff;
+  padding: 1.25rem 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.08);
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  text-align: center;
+}
+.project h3 {
+  font-size: 1.5rem;
+  margin-bottom: .5rem;
+}
+.project p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+.project a {
+  text-decoration: none;
+  color: #4a5cff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.project a:hover {
+  color: #3a4bcc;
+}
+/* project styles */
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* footer styles */
+.contact-info img{
+    width: 60px;
+    height: 60px;
+    display:inline-block;
+    margin: 10px auto;
+}
+
+.contact-info li {
+  list-style: none;
+  display: inline-block;
+  margin: 10px;
+}
+.contact-info {
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* general styles */
