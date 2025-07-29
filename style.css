@@ -154,19 +154,6 @@ img {
 .event:nth-of-type(odd)::before  { right: -2px; }
 .event:nth-of-type(even)::before { left: calc(50% - 2px); }
 
-/* Mobile: stack into one column */
-@media (max-width: 700px) {
-  .timeline {
-    grid-template-columns: 4px 1fr;
-    gap: 2rem 1.5rem;
-  }
-  .timeline::before { grid-column: 1; }
-  .event { grid-column: 2; }
-  .event::before {
-    left: 0;
-    transform: translateX(-50%);
-  }
-}
 
 .project img {
   max-width: 220px;      /* cap the width */
@@ -252,3 +239,58 @@ img {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 /* general styles */
+
+/* Remove default margins and add responsive padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* ...existing code... */
+
+@media (max-width: 600px) {
+    body, .intro, .timeline, .event {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100vw;
+    }
+    section.event, article.event {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100vw;
+    }
+    .event img {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        border-radius: 12px;
+        box-sizing: border-box;
+    }
+}
+@media (max-width: 600px) {
+  .event img {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    display: block;
+    border-radius: 12px; /* keep if you want rounded corners */
+    box-sizing: border-box;
+  }
+  .event {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100vw;
+  }
+}
