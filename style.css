@@ -31,9 +31,14 @@ header {
   border-radius: 50%;
   border: 2px solid #ccc;
   display: block;
-  transition: border-color 0.3s ease;
+  margin: 0 auto; /* centers the image horizontally */
   background-color: #f8f9fa;
+  transition: border-color 0.3s ease;
 }
+.profile-pic {
+  margin: 24px auto 16px auto;
+}
+
 .profile-pic:hover {
   border-color: #007bff;
   cursor: pointer;
