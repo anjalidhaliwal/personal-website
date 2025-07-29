@@ -27,7 +27,7 @@ header {
 /* profile picture image */
 .profile-pic {
   width: 100px;
-  height: 100px;
+  height: 130px;
   border-radius: 50%;
   border: 2px solid #ccc;
   display: inline-block;
@@ -82,11 +82,17 @@ img {
     transition: border-color 0.3s ease;
 
 }
-.media:hover {
-  border-color: #00ffc3;
+.media img {
+  /* ...existing styles... */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.media img:hover,
+.media img:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px #007bff;
+  outline: none;
   cursor: pointer;
 }
-
 .media li {
   list-style: none;
     display: inline-block;
