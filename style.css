@@ -27,16 +27,15 @@ header {
 /* profile picture image */
 .profile-pic {
   width: 100px;
-  height: 115px;
+  height: 100px;
   border-radius: 50%;
   border: 2px solid #ccc;
-  display: block;
-  margin: 0 auto; /* centers the image horizontally */
+  display: inline-block;
+  margin-left: 24px;
+  margin-top: 24px;
+  object-fit: cover; /* prevents stretching */
   background-color: #f8f9fa;
   transition: border-color 0.3s ease;
-}
-.profile-pic {
-  margin: 24px auto 16px auto;
 }
 
 .profile-pic:hover {
