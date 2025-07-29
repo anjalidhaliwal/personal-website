@@ -39,11 +39,11 @@ header {
 }
 
 .profile-pic:hover {
-  border-color: #007bff;
+  border-color:  oklab(60.488% 0.11719 -0.17426);;
   cursor: pointer;
 }
 .profile-pic:active {
-  border-color: #0056b3;
+  border-color:  oklab(60.488% 0.11719 -0.17426);;
 }
 .profile-pic:focus {
   outline: none;
@@ -75,6 +75,7 @@ img {
   height: 80px;
   border-radius: 10px;
   border: 1px solid #ddd;
+  object-fit: contain;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display:inline-block
@@ -88,8 +89,8 @@ img {
 }
 .media img:hover,
 .media img:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 0 2px #007bff;
+  border-color: oklab(60.488% 0.11719 -0.17426);
+  box-shadow: 0 0 0 2px  oklab(60.488% 0.11719 -0.17426);;
   outline: none;
   cursor: pointer;
 }
