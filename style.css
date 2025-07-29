@@ -131,18 +131,6 @@ img {
   text-align: center;
 }
 
-/* Images */
-.event img {
-  width: 300px;
-  height: auto;
-  border-radius: 12px;
-  display: block;
-  margin: 0 auto;
-  object-fit: cover;
-  aspect-ratio: 4 / 3;
-}
-
-
 /* Place odds on left, evens on right */
 .event:nth-of-type(odd)  { grid-column: 1; }
 .event:nth-of-type(even) { grid-column: 3; }
@@ -250,47 +238,24 @@ body, html {
 }
 
 /* ...existing code... */
-
-@media (max-width: 600px) {
-    body, .intro, .timeline, .event {
-        padding-left: 0;
-        padding-right: 0;
-        margin-left: 0;
-        margin-right: 0;
-        width: 100vw;
-    }
-    section.event, article.event {
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 0;
-        padding-right: 0;
-        width: 100vw;
-    }
-    .event img {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        border-radius: 12px;
-        box-sizing: border-box;
-    }
-}
 @media (max-width: 600px) {
   .event img {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    width: 100%;
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 12px;
     display: block;
-    border-radius: 12px; /* keep if you want rounded corners */
     box-sizing: border-box;
   }
   .event {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    width: 100vw;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  body {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }
